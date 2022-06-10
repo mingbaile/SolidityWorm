@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<a href="https://github.com/33357/coinerchat-contract-public/commit/0b257e38e227dba749136c22088f96c6b493878d" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        groups[_group].persons.push(_person);
+    }
+    groups[_group].messageIds.push(_messageId);
+    -        emit MessageIdAddedToGroup(_group, _messageId);
+    +        emit AddGroupMessageId(_group, _messageId);
+    return true;
+    }
+    
+    @@ -127,7 +127,7 @@ contract MessageDB is IMessageDB, AcceptedCaller {
+        persons[_person].groups.push(_group);
+    }
+    persons[_person].messageIds.push(_messageId);
+    -        emit MessageIdAddedToPerson(_person, _messageId);
+    +        emit AddPersonMessageId(_person, _messageId);
+    return true;
+    }
+    </pre>
+</code>
+
+<p>李蓝天：改事件名。原因：随定义变化，定义在另一个文件</p>
+
+</body>
+</html>
