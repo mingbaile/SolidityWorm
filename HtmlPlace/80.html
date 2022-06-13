@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<a href="https://github.com/ovnstable/ovnstable-app/commit/b49f05a640473c40dfdf46689d092f075a79345a" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -184,6 +184,7 @@ contract StrategyMStable is IStrategy, BalancerExchange, QuickswapExchange {
+            totalUsdc += wmaticUsdc;
+        }
+
++        emit Reward(totalUsdc);
+        return totalUsdc;
+    }
+}
+</code>
+<p>message：fix lost emit Reward event</p>
+<p>李蓝天：改动分类：add。原因：用于计数</p>
+
+</body>
+</html>

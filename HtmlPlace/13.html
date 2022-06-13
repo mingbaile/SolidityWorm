@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<a href="https://github.com/DAOPlayMarket/PlayMarket-2.0-Contracts/commit/0bed6f75724f55f57901b7c414fedf5a5c21372d" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -67,7 +67,7 @@ contract LogStorage is LogStorageI, AgentStorage {
+        }
+        
+        function setPriceEvent(uint _app, uint _obj, uint _price) external onlyAgentStorage() {
+     -    emit SetPriceEvent(Agents[msg.sender].store, _obj, _app, _price);
+     +    emit SetPriceEvent(Agents[msg.sender].store, _app, _obj, _price);
+        }
+        
+        function buyAppEvent(address _user, address _dev, uint _app, uint _obj, address _node, uint _price) external onlyAgentStorage() {
+    </pre>
+</code>
+
+<p>李蓝天：改动分类：改参。原因：顺序写错</p>
+
+</body>
+</html>

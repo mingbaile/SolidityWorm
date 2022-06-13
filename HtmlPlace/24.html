@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/fei-protocol/xTRIBE/commit/cc6f6289c04b89d9e94fd1da6dce4961a8a32c8b" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -90,7 +90,7 @@ contract xTRIBE is ERC20MultiVotes, ERC20Gauges, xERC4626, Multicall {
+            uint256 size = accounts.length;
+    
+            for (uint256 i = 0; i < accounts.length; ) {
+   -            emit DelegateVotesChanged(accounts[i], 0, getVotes(account[i]));
+   +            emit DelegateVotesChanged(accounts[i], 0, getVotes(accounts[i]));
+    
+                unchecked {
+                    i++;
+</code>
+<p></p>
+<p>李蓝天：改动分类：改参。原因：拼写错误</p>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<a href="https://github.com/fractional-finance/frabric-protocol/commit/4c716f080f32cac889a42c27a55391550ba6bd6b" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -122,6 +122,7 @@ abstract contract IntegratedLimitOrderDEX is ReentrancyGuardUpgradeable, Composa
+        tradeTokenBalances[order.trader] += price * order.amount;
+      }
+
++        emit OrderCancellation(order.trader, price, order.amount);
+      point.orders.pop();
+
+      // If all orders were by people removed, exit
+@@ -307,6 +308,8 @@ abstract contract IntegratedLimitOrderDEX is ReentrancyGuardUpgradeable, Composa
+
+    // If they are no longer whitelisted, remove them
+    if (!whitelisted(order.trader)) {
++        // Uses a 0 fee as this didn't have remove called, its parent did
++        // This will cause the parent fee to carry
+      _removeUnsafe(order.trader, 0);
+    }
+
+</code>
+<p></p>
+<p>李蓝天：改动分类：add。原因：记录交易员地址、价格、订单数量</p>
+
+</body>
+</html>

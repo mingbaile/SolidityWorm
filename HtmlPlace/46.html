@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<a href="https://github.com/mangrovedao/mangrove/commit/46ffdc17a28ff654e6e3bb9f9f3b23a86bc76d7e" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -57,12 +57,6 @@ abstract contract MultiUserAaveLender is MultiUser, AaveModule {
+        } catch {
+          // not different from `success == false`
+        }
+   -    emit LogIncident(
+   -      order.outbound_tkn,
+   -      order.inbound_tkn,
+   -      order.offerId,
+   -      "mgvOffer/aToken/transferFail"
+   -    );
+        return amount; // nothing was fetched
+      }
+    
+</code>
+<p>message：Use clean revert and require during trade, LogIncident when possible</p>
+<p>李蓝天：改动分类：delete。原因：</p>
+
+</body>
+</html>

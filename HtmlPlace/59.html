@@ -1,0 +1,28 @@
+<html>
+<body>
+
+<a href="https://github.com/mixplanet/mix/commit/621ed8f78fc7f93887f606985438303041a66ccb" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -25,12 +25,14 @@ contract Booth is IBooth, KIP7, KIP7Metadata("DSC Mixset", "MIXSET", 18) {
+            _mint(msg.sender, what);
+        }
+        mix.transferFrom(msg.sender, address(this), amount);
++        emit Stake(msg.sender, amount);
+    }
+
+    function unstake(uint256 share) external {
+        uint256 totalShares = totalSupply();
+        uint256 what = share.mul(mix.balanceOf(address(this))).div(totalShares);
+        _burn(msg.sender, share);
+        mix.transfer(msg.sender, what);
++        emit Unstake(msg.sender, share);
+    }
+}
+</code>
+<p></p>
+<p>李蓝天：改动分类：add*2。原因：记录调用者地址、股份、数量</p>
+
+</body>
+</html>
