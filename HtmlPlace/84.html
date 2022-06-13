@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<a href="https://github.com/primitivefinance/v1-connectors/commit/85a6cd4171ff97c16a67be250160ed47ff9d225a" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -358,6 +358,7 @@ contract PrimitiveSwaps is
+        // Return tokens to `getCaller()`.
+        _transferToCaller(redeem);
+        _transferToCaller(optionAddress);
++        emit Buy(getCaller(), optionAddress, quantity, premium);
+        return (quantity, premium);
+    }
+
+</code>
+<p></p>
+<p>李蓝天：改动分类：add。原因：记录要从中提取的账户地址、关闭longOptionTokes的地址、代币数量、加付款</p>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/slim12kg/protofire-continous-token-task/commit/2d548e7d73ba79fae98017f5f75ca269f3ac8f98" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -111,7 +111,7 @@ contract ContinousToken is BancorFormula, ERC20 {
+            uint256 amount = calculateContinuousMintReturn(_deposit);
+            _mint(msg.sender, amount);
+            reserveBalance = reserveBalance.add(_deposit);
+   -        emit ContinuousMint(msg.sender, amount, _deposit);
+   +        emit ContinuousMint(msg.sender, _deposit, amount);
+            return amount;
+        }
+    
+</code>
+<p></p>
+<p>李蓝天：改动分类：改参。原因：写错顺序</p>
+
+</body>
+</html>

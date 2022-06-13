@@ -1,0 +1,43 @@
+<html>
+<body>
+
+<a href="https://github.com/vetherasset/vaderprotocol-contracts/commit/1308470f3d841e93f7aab9e97babe23ec133a2ee" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -117,8 +117,8 @@ contract USDV is iERC20 {
+            require(sender != address(0), "sender");
+            _balances[sender] -= amount;
+            _balances[recipient] += amount;
+-            emit Transfer(sender, recipient, amount);
+        }
++        emit Transfer(sender, recipient, amount);
+    }
+
+    // Internal mint (upgrading and daily emissions)
+@@ -128,8 +128,8 @@ contract USDV is iERC20 {
+            require(account != address(0), "recipient");
+            totalSupply += amount;
+            _balances[account] += amount;
+-            emit Transfer(address(0), account, amount);
+        }
++        emit Transfer(address(0), account, amount);
+    }
+
+    // Burn supply
+@@ -149,8 +149,8 @@ contract USDV is iERC20 {
+            require(account != address(0), "address err");
+            _balances[account] -= amount;
+            totalSupply -= amount;
+-            emit Transfer(account, address(0), amount);
+        }
++        emit Transfer(account, address(0), amount);
+    }
+
+    //=========================================DAO=========================================//
+</code>
+<p></p>
+<p>李蓝天：改动分类：move*3。原因：修改意图</p>
+
+</body>
+</html>

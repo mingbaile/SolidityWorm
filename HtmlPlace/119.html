@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<a href="https://github.com/fei-protocol/fei-protocol-core/commit/cf31148cf34e857a786fbb6c6f172c00698d22e7" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -20,7 +20,6 @@ abstract contract OracleRef is IOracleRef, CoreRef {
+ 
+            function setOracle(address _oracle) external override onlyGovernor {
+                _setOracle(_oracle);
+       -        emit OracleUpdate(_oracle);
+            }
+        
+            function invert(Decimal.D256 memory price) public override pure returns(Decimal.D256 memory) {
+       @@ -39,5 +38,6 @@ abstract contract OracleRef is IOracleRef, CoreRef {
+        
+            function _setOracle(address _oracle) internal {
+                oracle = IOracle(_oracle);
+       +		emit OracleUpdate(_oracle);
+            }
+        }
+       \ No newline at end of file
+</code>
+<p>message：events cleanup</p>
+<p>李蓝天：改动分类：move。原因：功能没变（从所在外部函数移动到了被该外部函数调用的内部函数中）</p>
+
+</body>
+</html>
