@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<a href="https://github.com/thxprotocol/modules-solidity/commit/01b9031311eb2cec71c447467b1ba1db8c9f4d35" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -68,9 +68,11 @@ contract Token is IToken, RelayReceiver {
+ 
+            if (fee > 0) {
+                s.token.safeTransferFrom(_msgSender(), registry.feeCollector(), fee);
+   +            emit FeeCollected(_msgSender(), amount);
+            }
+            s.balance = s.balance.add(amount);
+            s.token.safeTransferFrom(_msgSender(), address(this), amount);
+   +        emit Depositted(_msgSender(), amount);
+        }
+    
+        /**
+</code>
+<p></p>
+<p>李蓝天：改动分类：add*2。原因：记录调用者地址、金额</p>
+
+</body>
+</html>

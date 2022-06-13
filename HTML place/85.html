@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<a href="https://github.com/primitivefinance/v1-connectors/commit/e54e2e29cc849af41d25d0c1d37e9d819fa89f22" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -423,6 +423,7 @@ contract PrimitiveLiquidity is
+    } else {
+        _transferToCaller(underlying);
+    }
++        emit RemoveLiquidity(getCaller(), optionAddress, liquidity);
+    return (underlyingTokensWithdrawn.add(proceeds));
+}
+
+</code>
+<p></p>
+<p>李蓝天：改动分类：add。原因：记录要从中提取的账户地址、关闭longOptionTokes的地址、移除的基础token的总量</p>
+
+</body>
+</html>

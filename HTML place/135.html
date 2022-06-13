@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/yuan-finance/yuan/commit/4d213291e35d65389070c39bad0d4baadc49680c" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -805,7 +805,7 @@ contract YUANUSDCETHPool is LPTokenWrapper, IRewardDistributionRecipient {
+            uint256 scalingFactor = YUAN(address(yuan)).yuansScalingFactor();
+            uint256 trueReward = reward.mul(scalingFactor).div(10**18);
+            yuan.safeTransfer(msg.sender, trueReward);
+-            emit RewardPaid(msg.sender, trueReward);
++            emit RewardPaid(msg.sender, reward);
+        }
+    }
+
+</code>
+<p>message：Unify reward and events with base scaling factor</p>
+<p>李蓝天：改动分类：改参。原因：修改意图</p>
+
+</body>
+</html>

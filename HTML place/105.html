@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/velo-finance/velo-protocol/commit/988b52faac953df6f0ad6094c2343d94a0f95c4c" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -384,6 +384,8 @@ contract VELO is VELOToken {
+            velosScalingFactor = BASE;
+            _veloBalances[initial_owner] = initSupply_.mul(10**24 / (BASE));
+    
+   +        emit Transfer(address(0), msg.sender, initSupply_);
+   +
+            // owner renounces ownership after deployment as they need to set
+            // rebaser and incentivizer
+            // gov = gov_;
+</code>
+<p></p>
+<p>李蓝天：改动分类：add。原因：记录token转移双方地址、token数量</p>
+
+</body>
+</html>

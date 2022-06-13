@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<a href="https://github.com/xdefilab/xdefi-base/commit/f663b5888ba3aabe592fce42de27ef6160294644" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -26,6 +26,7 @@ contract XFactory is XApollo {
+            constructor(address _config, address _creator) public {
+                xconfig = IXConfig(_config);
+                xcreator = IXPoolCreator(_creator);
+       +        emit SET_XPOOL_CREATOR(address(0), _creator);
+            }
+        
+            function isPool(address b) external view returns (bool) {
+</code>
+<p></p>
+<p>李蓝天：改动分类：add。原因：记录creator地址、新creator地址</p>
+
+</body>
+</html>
