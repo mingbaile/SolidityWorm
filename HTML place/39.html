@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<a href="https://github.com/KMPARDS/esn-contracts/commit/6505db13089066b492626805f974c3caefc9aee0" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -554,6 +554,7 @@ abstract contract Dayswappers is
+        seatIndexes[_networker] = _newSeatIndex;
+
+        emit SeatTransfer(address(0), _networker, _newSeatIndex);
++        emit Promotion(_newSeatIndex, 0);
+
+        return _newSeatIndex;
+    }
+</code>
+<p>message：Emit promotion event for 0 belt index</p>
+<p>李蓝天：改动分类：add。原因：</p>
+
+</body>
+</html>

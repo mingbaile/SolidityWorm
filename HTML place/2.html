@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<a href="https://github.com/blzd-dev/blzd-contracts/commit/4b31e3f77d39eae47efa15bd93061a81ef4dede9" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -173,7 +173,7 @@ contract SmartYeti is Ownable, ReentrancyGuard {
+            user.amount = 0;
+            user.rewardDebt = 0;
+            pool.lpToken.safeTransfer(address(msg.sender), amount);
+   -        emit EmergencyWithdraw(msg.sender, user.amount);
+   +        emit EmergencyWithdraw(msg.sender, amount);
+        }
+    
+        // Withdraw reward. EMERGENCY ONLY.
+    </pre>
+</code>
+
+<p>message：emit emergencywithdraw user.amount to amount</p>
+
+<p>李蓝天：改动分类：改参。原因：引错变量，违背原意</p>
+
+</body>
+</html>

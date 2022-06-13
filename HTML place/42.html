@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/maidverse/maidcoin/commit/0e295b7377f80bec7a99dc1da22627e13ff740d5" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -118,7 +118,7 @@ contract TheMaster is Ownable, ITheMaster {
+            if (mintable == true) {
+                mintableByAddr[addr] = true;
+            }
+   -        emit Add(pid, addr, delegate, mintable, supportable, supportingRatio, allocPoint);
+   +        emit Add(pid, addr, delegate, mintableByAddr[addr], supportable, supportingRatio, allocPoint);
+        }
+    
+        function set(uint256 pid, uint256 allocPoint) external override onlyOwner {
+</code>
+<p>message：bug fix</p>
+<p>李蓝天：改动分类：改参。原因：引错变量，违背原意图</p>
+
+</body>
+</html>

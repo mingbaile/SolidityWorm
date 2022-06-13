@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/Moloch-Mystics/Molochv2.1/commit/c0ee9055894380c7eb5bfe5f0d0792399696a96e" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -562,7 +562,7 @@ contract Moloch is ReentrancyGuard {
+        }
+    }
+
+-        emit Ragequit(msg.sender, sharesToBurn, lootToBurn);
++        emit Ragequit(memberAddress, sharesToBurn, lootToBurn);
+}
+
+function ragekick(address memberToKick) public nonReentrant {
+</code>
+<p>message：use passed parameter instead of msg.sender</p>
+<p>李蓝天：改动分类：改参。原因：引错变量，违背原意图</p>
+
+</body>
+</html>

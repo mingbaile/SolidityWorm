@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<a href="https://github.com/OpiumProtocol/erc721o/commit/59deecaa88b0bff37a001e59f38f6d4086a4eee3" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -106,6 +106,7 @@ contract ERC721OTransferable is ERC721OBase, ReentrancyGuard {
+            );
+        
+            emit Transfer(_from, _to, _tokenIds[0]);
+       +    emit TransferWithQuantity(_from, _to, _tokenIds[0], _amounts[0]);
+        
+            // Number of transfers to execute
+            uint256 nTransfer = _tokenIds.length;
+       @@ -135,6 +136,7 @@ contract ERC721OTransferable is ERC721OBase, ReentrancyGuard {
+              balTo = balTo.updateTokenBalance(index, _amounts[i], ObjectLib.Operations.ADD);
+        
+              emit Transfer(_from, _to, _tokenIds[i]);
+       +      emit TransferWithQuantity(_from, _to, _tokenIds[i], _amounts[i]);
+            }
+        
+            // Update storage of the last bin visited
+</code>
+<p></p>
+<p>李蓝天：改动分类：add*2。原因：记录发送方和接收方地址、tokenid、数量</p>
+
+</body>
+</html>

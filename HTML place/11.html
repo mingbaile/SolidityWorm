@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<a href="https://github.com/codeDcode-2021/futurecast-contracts/commit/bc1357b06446bad9ae890bb41b9eb33928ab1465" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -209,7 +209,7 @@ contract EIP1167_Question
+        stakeDetails[msg.sender][_optionId] = optionStakeAmount.add(stakeAmount);
+        bettingOptionBalances[_optionId] = bettingOptionBalances[_optionId].add(stakeAmount);
+        
+-        emit staked(msg.sender, _optionId, msg.value);
++        emit staked(msg.sender, _optionId, stakeAmount);
+    }
+    
+    
+    </pre>
+</code>
+
+<p>李蓝天：改动分类：改参。原因：引错变量，违背原意</p>
+
+</body>
+</html>

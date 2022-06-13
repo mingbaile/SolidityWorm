@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<a href="https://github.com/kleros/arbitrable-proxy-contracts/commit/6bded47cb17d67467d140f6e74283a9eb1b531a0" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -65,7 +65,7 @@ contract BinaryArbitrableProxy is IArbitrable, IEvidence {
+ 
+            arbitratorExternalIDtoLocalID[address(_arbitrator)][disputeID] = localDisputeID;
+    
+   -        emit MetaEvidence(disputeID, _metaevidenceURI);
+   +        emit MetaEvidence(localDisputeID, _metaevidenceURI);
+            emit Dispute(_arbitrator, disputeID, localDisputeID, localDisputeID);
+    
+            msg.sender.send(msg.value-arbitrationCost);
+</code>
+<p>message：message：use localID for metaevidence</p>
+<p>李蓝天：改动分类：改参。原因：修改意图</p>
+
+</body>
+</html>

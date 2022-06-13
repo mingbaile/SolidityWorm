@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<a href="https://github.com/kogecoin/vault-contracts/commit/73810ccbee133b6e66f5e09e0427483a7aad4a9f" style="margin-left:50px;">所在commit地址</a>
+
+<code>
+    <pre style="font-size: 20px;font-family:'Times New Roman', Times, serif;color:brown;">
+        @@ -175,7 +175,7 @@ abstract contract JarBase is ERC20, Ownable, Pausable, ReentrancyGuard {
+            token.safeTransfer(msg.sender, r);
+    
+            // Emit event
+   -        emit Withdraw(msg.sender, _shares);
+   +        emit Withdraw(msg.sender, r);
+        }
+    
+        // A view function that makes it easier for the UI to display LPs of users
+</code>
+<p>message：incorporate additional audit feedback …
+    - We modified the event (line 178) such that Withdraw emits the amount withdrawn</p>
+<p>李蓝天：改动分类：改参。原因：修改意图</p>
+
+</body>
+</html>
